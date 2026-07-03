@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Smart Build & Run (自动判断)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\build.bat",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "按 Ctrl+Shift+B 自动根据当前打开的文件执行对应任务"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "del",
+            "args": [
+                "/Q",
+                "${workspaceFolder}\\main.exe",
+                "${workspaceFolder}\\data_generator.exe"
+            ],
+            "problemMatcher": [],
+            "detail": "删除生成的可执行文件"
+        }
+    ]
+}
